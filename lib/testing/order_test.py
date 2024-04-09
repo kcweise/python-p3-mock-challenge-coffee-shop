@@ -96,13 +96,13 @@ class TestOrders:
 
     def test_get_all_orders(self):
         '''Order class all attribute'''
-        Order.all = []
+        Order.all_orders = []
         coffee = Coffee("Mocha")
         customer = Customer('Wayne')
         customer_2 = Customer('Dima')
         order_1 = Order(customer, coffee, 2.0)
         order_2 = Order(customer_2, coffee, 5.0)
 
-        assert (len(Order.all) == 2.0)
-        assert (order_1 in Order.all)
-        assert (order_2 in Order.all)
+        assert (len(Order.all_orders) == 2.0)
+        assert (order_1 in Order.all_orders)
+        assert (order_2 in Order.all_orders)
